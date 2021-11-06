@@ -89,7 +89,7 @@ void PrekladovySlovnik::FindWord(std::string word)
 
 void PrekladovySlovnik::PrefixFind(const std::string pref)
 {
-	const char* firstAfterPrefix = (pref + "0").c_str();
+	const char* firstAfterPrefix = (pref + "0").c_str(); // TODO
 	auto prefixedEndIt = forward_dict.lower_bound(firstAfterPrefix);
 
 	for (auto it = prefixedEndIt; it != std::end(forward_dict) && it->first.compare(0, pref.size(), pref) == 0; ++it) {
